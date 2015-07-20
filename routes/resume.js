@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET resume home page. */
 router.get('/', function(req, res, next) {
-  res.render('resume', { titlePrefix: 'Resume' });
+  var viewModel = {
+    titlePrefix: 'Resume',
+    isResumeActive: true
+  };
+  res.render('resume', viewModel);
 });
 
 module.exports = router;

@@ -19,9 +19,9 @@ html
           a(class='navbar-brand' href='/') Ethan Young
         div(class='navbar-collapse collapse')
           ul(class='nav navbar-nav')
-            li
+            li(class=(isHomeActive ? 'active' : ''))
               a(href='/') Home
-            li
+            li(class=(isResumeActive ? 'active' : ''))
               a(href='/resume') Resume
 
     div(class='container')
