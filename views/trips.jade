@@ -3,17 +3,21 @@ extends layout
 block content
    div.row
       div(class='visible-md visible-lg col-md-2')
-         LEFT NAV HERE
+         div(class='hidden-print', role='complementary')
+            ul(class='nav ey-leftNav', data-spy='affix', data-offset-top='0', data-offset-bottom='0')
+               each trip in trips
+                  li: a(href='/trips/'+trip.id) #{trip.name}
+
       div(class='col-sm-12 col-md-10', role='main')
-         h1 Trips
-         each trip in trips
-            div.media
-               a(class='pull-left hidden-xs', href='/trips/'+trip.id)
-                  img(class='media-object', alt=trip.img.alt, src='/images/trips/'+trip.id+'/'+trip.img.filename)
-               div.media-body
-                  h4.media-heading.
-                     #{trip.name}
-                     #[a(href='/trips/'+trip.id) [Gallery]]
-                     #[a(href='/trips/'+trip.id+'/slide-show') [Slide Show]]
-                  p
-                     != trip.description
+            h1 Trips
+            each trip in trips
+               div.media
+                  a(class='pull-left hidden-xs', href='/trips/'+trip.id)
+                     img(class='media-object', alt=trip.img.alt, src='/images/trips/'+trip.id+'/'+trip.img.filename)
+                  div.media-body
+                     h4.media-heading.
+                        #{trip.name}
+                        #[a(href='/trips/'+trip.id) [Gallery]]
+                        #[a(href='/trips/'+trip.id+'/slide-show') [Slide Show]]
+                     p
+                        != trip.description
