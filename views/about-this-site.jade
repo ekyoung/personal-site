@@ -1,0 +1,47 @@
+extends layout
+
+block content
+   h1 About This Site
+   h3 Node.js and Express
+   p.
+      This site is currently built as an Express app for Node.js. Previous incarnations include an ASP.NET
+      Web Site Project, an ASP.NET Web Application Project, and an ASP.NET MVC Project. It's pretty simple,
+      but does require some actual coding, so rebuilding it is good practice when I want to learn a new
+      technology.
+   h3 Angular JS
+   p.
+      The image galleries and  slide shows in the #[a(href='/trips') trips] portion
+      of the site use #[a(href='http://www.angularjs.org/', target='_blank') Angular JS]. The images are
+      all deployed to a separate domain. Each collection of images also contains an index file with titles,
+      the date the picture was taken, and a few descriptions. An
+      #[a(href='http://www.angularjs.org/', target='_blank') Angular JS] controller loads the index file
+      using $http and builds the list of images, or the slide show view client side.
+   h3 Bootstrap
+   p.
+      Using #[a(href='http://getbootstrap.com', target='_blank') Bootstrap] made the styling of this site
+      super easy. I used some of the responsive features of the framework in the
+      #[<a(href='/trips') trips] portion of the site to hide the left nav on smaller devices. Since I'm not
+      a graphic designer (and I'm colorblind), I used the Flatly theme from
+      #[a(href='http://bootswatch.com', target='_blank') Bootswatch] for the look and feel.
+   h3 Automated Testing
+   p.
+      Unit tests for the image collection index editing app are implemented in
+      #[a(href='http://www.nunit.org/', target='_blank') NUnit]. Acceptance tests are implemented in
+      #[a(href='http://www.specflow.org/', target='_blank') SpecFlow].
+      #[a(href='http://www.jetbrains.com/teamcity/', target='_blank') TeamCity] runs these with every
+      commit. There are no tests for the server side portion of the website because all the dynamic behavior
+      is implemented with #[a(href='http://www.angularjs.org/', target='_blank') Angular JS] on the client
+      side. The #[a(href='http://www.angularjs.org/', target='_blank') Angular JS] code is tested with
+      #[a(href='http://jasmine.github.io/', target='_blank') Jasmine] running in
+      #[a(href='http://karma-runner.github.io', target='_blank') Karma].
+   h3 Hosting
+   p.
+      This site is hosted on an
+      #[a(href='http://aws.amazon.com/ec2/', target='_blank') EC2 instance in Amazon Web Services].
+   h3 Code
+   p.
+      The #[a(href='https://github.com/ekyoung/personal-site-node', target='_blank') code for this site]
+      is on #[a(href='https://github.com', target='_blank') GitHub]. The
+      #[a(href='https://bitbucket.org/ekyoung/personal-website', target='_blank') code for the image collection index editing app]
+      is still in a #[a(href='http://mercurial.selenic.com/', target='_blank') Mercurial]
+      repository hosted on #[a(href='https://bitbucket.org/', target='_blank') Bitbucket].
