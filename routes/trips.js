@@ -24,4 +24,16 @@ router.get('/:tripId', function(req, res, next) {
   res.render('trips/gallery', viewModel);
 });
 
+/* GET slide show page. */
+router.get('/:tripId/slide-show', function(req, res, next) {
+  var tripId = req.params.tripId;
+
+  var viewModel = {
+    titlePrefix: 'Trips',
+    isTripsActive: true,
+    trip: tripRepository.getTrip(tripId)
+  };
+  res.render('trips/slide-show', viewModel);
+});
+
 module.exports = router;
