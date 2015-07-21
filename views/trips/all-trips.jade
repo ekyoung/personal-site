@@ -1,13 +1,9 @@
-extends layout
+extends ../layout
 
 block content
    div.row
       div(class='visible-md visible-lg col-md-2')
-         div(class='hidden-print', role='complementary')
-            ul(class='nav ey-leftNav', data-spy='affix', data-offset-top='0', data-offset-bottom='0')
-               each trip in trips
-                  li: a(href='/trips/'+trip.id) #{trip.name}
-
+         include ./left-nav.jade
       div(class='col-sm-12 col-md-10', role='main')
             h1 Trips
             each trip in trips
