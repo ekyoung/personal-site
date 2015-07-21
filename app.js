@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var tripRepository = require('./lib/trip-repository');
+
 var routes = require('./routes/index');
 var trips = require('./routes/trips');
 var aboutThisSite = require('./routes/about-this-site');
@@ -24,6 +26,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+app.locals.trips = tripRepository.getAllTrips();
 
 app.use('/', routes);
 app.use('/trips', trips);

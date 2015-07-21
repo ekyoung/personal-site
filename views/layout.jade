@@ -21,8 +21,13 @@ html
           ul(class='nav navbar-nav')
             li(class=(isHomeActive ? 'active' : ''))
               a(href='/') Home
-            li(class=(isTripsActive ? 'active' : ''))
-              a(href='/trips') Trips
+            li(class='dropdown'+(isTripsActive ? ' active' : ''))
+              a(href='#', class='dropdown-toggle' data-toggle='dropdown') Trips #[b(class='caret') ]
+              ul.dropdown-menu
+                li: a(href='/trips') All Trips
+                li.divider
+                each trip in trips
+                  li: a(href='/trips/'+trip.id) #{trip.name}
             li(class=(isAboutActive ? 'active' : ''))
               a(href='/about-this-site') About This Site
             li(class=(isResumeActive ? 'active' : ''))
