@@ -1,0 +1,42 @@
+extends layout
+
+block content
+   div.row
+      div(class='visible-md visible-lg col-md-2')
+         LEFT NAV HERE
+      div(class='col-sm-12 col-md-10', role='main')
+         h1 Trips
+         div.media
+            a(class='pull-left hidden-xs', href='/trips/alaska-2005')
+               img(class='media-object', alt='My motorcycle at the Arctic Circle at midnight.', src='images/trips/alaska-2005/Arctic Circle.JPG')
+            div.media-body
+               h4.media-heading.
+                  Alaska Motorcycle Trip 2005
+                  #[a(href='/trips/alaska-2005') [Gallery]]
+                  #[a(href='/trips/alaska-2005/slide-show') [Slide Show]]
+               p.
+                  This motorcycle trip took me 25,000 miles over about 10 weeks. I visited the Southernmost, Easternmost, Northernmost, and Westernmost points
+                  in the lower 48 states, and the Northernmost and Westernmost road accessible points in North America. In addition to these bragging rights
+                  points, I stopped at a lot of great sights along the way. I've included some pictures of the (better than expected) road conditions up North
+                  for reference by other riders thinking of making the trip.
+         div.media
+            a(class='pull-left hidden-xs', href='/trips/southwest-2007')
+               img(class='media-object' alt='A rock formation in the Jumbo Rocks campground of Joshua Tree National Park at sunset.', src='/images/trips/southwest-2007/Jumbo Rocks Close Up 2.jpg')
+            div.media-body
+               h4.media-heading.
+                  Southwest Motorcycle Trip 2007
+                  #[a(href='/trips/southwest-2007') [Gallery]]
+                  #[a(href='/trips/southwest-2007/slide-show') [Slide Show]]
+               p.
+                  This trip took me through the three national parks in the lower 48 that I hadn't yet been to: Channel Islands, Joshua Tree, and Saguaro.
+         div.media
+            a(class='pull-left hidden-xs', href='/trips/mexico-2013')
+               img(class='media-object', alt='Ethan and Sarah with the Royal Playa del Carmen\'s pet iguana on their heads.', src='/images/trips/mexico-2013/Iguana on Our Heads.jpg')
+            div.media-body
+               h4.media-heading.
+                  Playa del Carmen, Mexico 2013
+                  #[a(href='/trips/mexico-2013') [Gallery]]
+                  #[a(href='/trips/mexico-2013/slide-show') [Slide Show]]
+               p.
+                  Sarah and I visited Playa del Carmen, Mexico to attend her friend Anne's wedding. While there we explored the cenote at Rio Secreto, Mayan
+                  ruins in Coba and Tulum, and went snorkeling at Gran Arrecife Maya.
