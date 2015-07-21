@@ -1,10 +1,11 @@
 extends ../layout
 
 block head
+   link(rel='stylesheet', href='/client-side/trips/image-gallery/image-gallery.css')
    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js')
    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js')
-   script(src='/javascripts/xml2json.js')
-   script(src='/javascripts/GalleryControllers.js')
+   script(src='/client-side/trips/xml2json.js')
+   script(src='/client-side/trips/image-gallery/GalleryControllers.js')
 
 block content
    div.row

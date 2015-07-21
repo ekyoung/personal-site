@@ -26,7 +26,7 @@ module.exports = function(config) {
       'angular-1.2.0/angular-loader.js',
       'angular-1.2.0/*.min.js',
       'angular-1.2.0/angular-scenario.js',
-      '../../public/javascripts/bootstrap-*.js'
+      '../../public/common/bootstrap-*.js'
     ],
 
 

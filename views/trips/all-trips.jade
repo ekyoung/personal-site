@@ -9,7 +9,7 @@ block content
             each trip in trips
                div.media
                   a(class='pull-left hidden-xs', href='/trips/'+trip.id)
-                     img(class='media-object', alt=trip.img.alt, src='/images/trips/'+trip.id+'/'+trip.img.filename)
+                     img(class='media-object', alt=trip.img.alt, src='/client-side/trips/index-images/'+trip.id+'/'+trip.img.filename)
                   div.media-body
                      h4.media-heading.
                         #{trip.name}

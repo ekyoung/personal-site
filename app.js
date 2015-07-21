@@ -24,8 +24,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('less-middleware')(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/client-side', require('less-middleware')(path.join(__dirname, 'public')));
+app.use('/client-side', express.static(path.join(__dirname, 'public')));
 
 
 app.locals.trips = tripRepository.getAllTrips();
