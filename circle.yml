@@ -5,3 +5,18 @@ dependencies:
 test:
   post:
    - mv ./test-reports/* $CIRCLE_TEST_REPORTS
+
+deployment:
+  production:
+    branch: develop
+    codedeploy:
+      personal-site-node:
+        application_root: /
+        revision_location:
+          revision_type: S3
+          s3_location:
+            bucket: ethan-young-code-deploy
+            key_pattern: personal-site-node-develop-{SHORT_COMMIT}-{BUILD_NUM}
+        region: us-east-1
+        deployment_group: all-personal-site-node-instances
+        deployment_config: CodeDeployDefault.OneAtATime
