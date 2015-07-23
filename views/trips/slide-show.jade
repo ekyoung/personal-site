@@ -1,0 +1,21 @@
+extends ../layout
+
+block head
+   link(rel='stylesheet', href='/client-side/trips/slide-show/slide-show.css')
+   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js')
+   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js')
+   script(src='/client-side/trips/xml2json.js')
+   script(src='/client-side/trips/slide-show/SlideShowApp.js')
+   script(src='/client-side/trips/slide-show/SlideShowControllers.js')
+
+block content
+   div.row
+   div(class='visible-md visible-lg col-md-2')
+      include ./left-nav.jade
+   div(class='col-sm-12 col-md-10' role='main')
+      h1= trip.name
+      script(type='text/javascript').
+         angular.module('slideShowApp')
+            .value('slideShowIndexFileUrl', '#{trip.slides.indexFileUrl}')
+            .value('slideShowRootUrl', '#{trip.slides.rootUrl}');
+      div(ng-app='slideShowApp', ng-view)

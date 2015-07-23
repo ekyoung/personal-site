@@ -1,7 +1,40 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= titlePrefix + ' - EthanYoung.us'
+    link(rel='stylesheet', href='/client-side/common/bootstrap.min.css')
+    link(rel='stylesheet', href='/client-side/common/style.css')
+    block head
   body
-    block content
+    nav(class='navbar navbar-default navbar-fixed-top', role='navigation')
+      div(class='container')
+        div(class='navbar-header')
+          button(type='button', class='navbar-toggle', data-toggle='collapse', data-target='.navbar-collapse')
+            span(class='sr-only') Toggle navigation
+            span(class='icon-bar')
+            span(class='icon-bar')
+            span(class='icon-bar')
+          a(class='navbar-brand' href='/') Ethan Young
+        div(class='navbar-collapse collapse')
+          ul(class='nav navbar-nav')
+            li(class=(isHomeActive ? 'active' : ''))
+              a(href='/') Home
+            li(class='dropdown'+(isTripsActive ? ' active' : ''))
+              a(href='#', class='dropdown-toggle' data-toggle='dropdown') Trips #[b(class='caret') ]
+              ul.dropdown-menu
+                li: a(href='/trips') All Trips
+                li.divider
+                each trip in trips
+                  li: a(href='/trips/'+trip.id) #{trip.name}
+            li(class=(isAboutActive ? 'active' : ''))
+              a(href='/about-this-site') About This Site
+            li(class=(isResumeActive ? 'active' : ''))
+              a(href='/resume') Resume
+
+    div(class='container')
+      block content
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='/client-side/common/bootstrap-3.3.5.min.js')
