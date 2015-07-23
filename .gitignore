@@ -27,16 +27,16 @@ build/Release
 node_modules
 
 # WebStorm user specific files
-.idea/workspace.xml 
-.idea/tasks.xml 
-.idea/dictionaries 
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
  
 # Webstorm sensitive or high-churn files: 
-.idea/dataSources.ids 
-.idea/dataSources.xml 
-.idea/sqlDataSources.xml 
-.idea/dynamic.xml 
-.idea/uiDesigner.xml 
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
 
 # Test output from the build server karma config
 test-reports
