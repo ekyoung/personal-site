@@ -39,4 +39,4 @@ node_modules
 .idea/uiDesigner.xml 
 
 # Test output from the build server karma config
-$CIRCLE_TEST_REPORTS/
+test-reports

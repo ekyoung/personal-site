@@ -35,7 +35,7 @@ module.exports = function(config) {
     reporters: ['progress', 'junit'],
 
     junitReporter: {
-      outputDir: '$CIRCLE_TEST_REPORTS', // results will be saved as $outputDir/$browserName.xml
+      outputDir: '../../test-reports', // results will be saved as $outputDir/$browserName.xml
       outputFile: 'test-report.xml', // if included, results will be saved as $outputDir/$browserName/$outputFile
       suite: 'client-side'
     },
