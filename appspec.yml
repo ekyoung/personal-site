@@ -8,8 +8,8 @@ files:
     destination: /srv/src/
 hooks:
   ApplicationStart:
-    - location: /srv/src/deploy/start-site.sh
+    - location: ./deploy/start-site.sh
       runas: root
   ApplicationStop:
-    - location: /srv/src/deploy/stop-site.sh
+    - location: ./deploy/stop-site.sh
       runas: root
