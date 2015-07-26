@@ -1,1 +1,1 @@
-sudo start personal-site-node
+start personal-site-node

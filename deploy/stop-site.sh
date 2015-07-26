@@ -1,1 +1,1 @@
-sudo stop personal-site-node
+stop personal-site-node
