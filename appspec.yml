@@ -5,7 +5,7 @@ files:
   - source: ./deploy/personal-site-node.conf
     destination: /etc/init/
   - source: .
-    destination: /srv/src/
+    destination: /srv/personal-site-node/
 hooks:
   ApplicationStart:
     - location: ./deploy/start-site.sh
